@@ -22,7 +22,7 @@ module.exports = {
       const apiData = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN-OFFICIAL/Nayan/main/api.json');
       const apiUrl = apiData.data.sim;
       const kl = await axios.get(`https://raw.githubusercontent.com/MOHAMMAD-NAYAN-OFFICIAL/Nayan/main/api.json`);
-      const apiUrl2 = kl.data.api2;
+      const apiUrl2 = kl.data.api;
       const response = await axios.get(`${apiUrl}/sim?type=ask&ask=${encodeURIComponent(event.body)}`);
       console.log(response.data);
       const result = response.data.data.msg;
